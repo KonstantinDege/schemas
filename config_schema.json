@@ -122,6 +122,14 @@
                 "type": "number",
                 "minimum": 0
             },
+            "length_code_side": {
+                "type": "number",
+                "default": 0.5
+            },
+            "length_box_short_side": {
+                "type": "number",
+                "default": 0.5
+            },
             "required": [
                 "colors",
                 "shape_color",
@@ -248,9 +256,9 @@
                     0
                 ],
                 [
-                    360,
-                    101,
-                    101
+                    100,
+                    128,
+                    128
                 ]
             ],
             "description": "A color value in HSV format",
@@ -258,17 +266,17 @@
                 {
                     "type": "integer",
                     "minimum": 0,
-                    "maximum": 360
+                    "maximum": 100
                 },
                 {
                     "type": "integer",
-                    "minimum": 0,
-                    "maximum": 101
+                    "minimum": -128,
+                    "maximum": 128
                 },
                 {
                     "type": "integer",
-                    "minimum": 0,
-                    "maximum": 101
+                    "minimum": -128,
+                    "maximum": 128
                 }
             ]
         }
