@@ -149,7 +149,7 @@
                     "minimum": 0,
                     "description": "Delay in seconds."
                 },
-                "altitude": {
+                "height": {
                     "type": "number",
                     "minimum": 0,
                     "description": "Altitude in meters."
