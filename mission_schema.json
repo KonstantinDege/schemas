@@ -51,7 +51,8 @@
     },
     "required": [
         "parameter",
-        "commands"
+        "commands",
+        "action"
     ],
     "definitions": {
         "command": {
@@ -126,6 +127,43 @@
                     "additionalProperties": false
                 },
                 {
+                    "type": "object",
+                    "properties": {
+                        "action": {
+                            "type": "string",
+                            "enum": [
+                                "mov_local"
+                            ],
+                            "description": "The type of action for the drone."
+                        },
+                        "commands": {
+                            "type": "object",
+                            "properties": {
+                                "x": {
+                                    "type": "number"
+                                },
+                                "y": {
+                                    "type": "number"
+                                },
+                                "z": {
+                                    "type": "number"
+                                },
+                                "yaw": {
+                                    "type": "number"
+                                }
+                            },
+                            "required": [
+                                "x",
+                                "y"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "action"
+                    ],
+                    "additionalProperties": false
+                },
+                {
                     "src": {
                         "type": "string",
                         "description": "The source of the command."
@@ -149,7 +187,7 @@
                     "minimum": 0,
                     "description": "Delay in seconds."
                 },
-                "height": {
+                "altitude": {
                     "type": "number",
                     "minimum": 0,
                     "description": "Altitude in meters."
