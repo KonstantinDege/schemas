@@ -147,6 +147,19 @@
                     "maximum": 1,
                     "default": 0,
                     "description": "The percentage of the bounding box that is shrunk to get the actual object size"
+                },
+                "circularity_threshold": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "default": 0.7,
+                    "description": "The threshold for the circularity of the object. A value of 1 means a perfect circle."
+                },
+                "approx_poly_epsilon": {
+                    "type": "number",
+                    "minimum": 0,
+                    "default": 0.04,
+                    "description": "The approximation accuracy for the polygon of the object"
                 }
             },
             "additionalProperties": false,
