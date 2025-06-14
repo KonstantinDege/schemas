@@ -160,6 +160,12 @@
                     "minimum": 0,
                     "default": 0.04,
                     "description": "The approximation accuracy for the polygon of the object"
+                },
+                "aspect_ratio": {
+                    "type": "number",
+                    "minimum": 0,
+                    "default": 0.1,
+                    "description": "The aspect ratio of the object. A value of 1 means a square."
                 }
             },
             "additionalProperties": false,
