@@ -140,6 +140,13 @@
                     "type": "boolean",
                     "default": true,
                     "description": "If true, the bounding box of the object is checked to be a square."
+                },
+                "bounding_box_shrink_percentage": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "default": 0,
+                    "description": "The percentage of the bounding box that is shrunk to get the actual object size"
                 }
             },
             "additionalProperties": false,
